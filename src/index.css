@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fade-up for hero/sections */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 0.5s ease-out both;
+}
+
+.animate-fadeUp.delay-150 {
+  animation-delay: 0.15s;
+}
+
+/* Marquee / scrolling categories */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* src/index.css */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-infinite-scroll {
+  display: flex;
+  width: max-content; /* This is the secret sauce */
+  animation: scroll 30s linear infinite;
+}
+
+/* Optional: Pause on hover so people can click */
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
+}
+
+.scroll-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.scroll-track {
+  display: flex;       /* ← important: flex row */
+  gap: 1rem;
+  width: max-content;  /* ← important: let it expand horizontally */
+  animation: marquee 20s linear infinite;
+}
+
+.scroll-track:hover {
+  animation-play-state: paused;
+}
+
+
