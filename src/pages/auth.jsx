@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { mockSignIn, mockSignUp } from "../mock/auth";
 import signupImg from "../assets/images/image2.png";
 import signinImg from "../assets/images/image1.png";
 import { FcGoogle } from "react-icons/fc";
@@ -6,6 +8,26 @@ import { FcGoogle } from "react-icons/fc";
 export default function Auth() {
   const [mode, setMode] = useState("signup");
   const isSignup = mode === "signup";
+  const navigate = useNavigate();
+
+  // Form state
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState(""); // optional for mock
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let user;
+    if (isSignup) {
+      user = mockSignUp({ name, email });
+    } else {
+      user = mockSignIn({ email });
+    }
+
+    if (user) {
+      navigate("/dashboard"); // redirect after login/signup
+    }
+  };
 
   return (
     <div className="min-h-screen relative flex items-center justify-center overflow-hidden">
@@ -70,23 +92,33 @@ export default function Auth() {
               <div className="flex-1 h-px bg-white/20" />
             </div>
 
-            <form className="space-y-4">
+            {/* FORM */}
+            <form className="space-y-4" onSubmit={handleSubmit}>
               {isSignup && (
                 <input
                   type="text"
                   placeholder="Full name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   className="w-full px-4 py-3 rounded-md bg-white/10 text-white placeholder-white/60 border border-white/20 focus:outline-none focus:border-[#e73768]"
+                  required
                 />
               )}
               <input
                 type="email"
                 placeholder="Email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-3 rounded-md bg-white/10 text-white placeholder-white/60 border border-white/20 focus:outline-none focus:border-[#e73768]"
+                required
               />
               <input
                 type="password"
                 placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 className="w-full px-4 py-3 rounded-md bg-white/10 text-white placeholder-white/60 border border-white/20 focus:outline-none focus:border-[#e73768]"
+                required
               />
               <button
                 type="submit"

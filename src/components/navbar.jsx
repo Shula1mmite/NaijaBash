@@ -16,16 +16,15 @@ export default function Navbar() {
 
   return (
     <nav className="bg-black text-white shadow-md h-15">
-  <div className="max-w-full mx-auto px-6 flex items-center justify-between h-full">
+      <div className="max-w-full mx-auto px-6 flex items-center justify-between h-full">
         {/* Logo */}
-   <Link to="/" className="flex items-center h-full">
-  <img
-    src={Logo}
-    alt="NaijaBash Logo"
-    className="lg:h-[80px] lg:w-[200px] md:h-16 md:w-auto "
-  />
-</Link>
-
+        <Link to="/" className="flex items-center h-full">
+          <img
+            src={Logo}
+            alt="NaijaBash Logo"
+            className="lg:h-[80px] lg:w-[200px] md:h-16 md:w-auto "
+          />
+        </Link>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 items-center">
@@ -47,26 +46,15 @@ export default function Navbar() {
           <li>
             <Link
               to="/auth"
-              className="ml-4 px-4 py-2 bg-[#e73768] text-white font-bold uppercase tracking-wide rounded-md hover:bg-[#69e0f9] hover:text-black transition-all"
+              className="ml-4 text-white font-bold uppercase tracking-wide hover:text-[#e73768] transition-all"
             >
-              Sign Up
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/auth"
-              className="ml-2 px-4 py-2 border-2 border-[#69e0f9] text-[#69e0f9] font-bold uppercase tracking-wide rounded-md hover:bg-[#69e0f9] hover:text-black transition-all"
-            >
-              Sign In
+              Sign Up / Sign In
             </Link>
           </li>
         </ul>
 
         {/* Mobile menu button */}
-        <button
-          className="md:hidden focus:outline-none"
-          onClick={toggleMenu}
-        >
+        <button className="md:hidden focus:outline-none" onClick={toggleMenu}>
           <svg
             className="w-6 h-6"
             fill="none"
