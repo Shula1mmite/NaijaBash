@@ -8,6 +8,7 @@ import Dashboard from "./pages/dashboard"; //
 import HostEvent from "./pages/hostevent";
 import Contact from "./pages/contact";
 import About from "./pages/about";
+import Settings from "./pages/settings";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/host-event" element={<HostEvent />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path="/settings" element={<Settings />} />
       </Route>
     </Routes>
   );
