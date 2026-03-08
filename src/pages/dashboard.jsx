@@ -40,27 +40,27 @@ export default function Dashboard() {
     {
       name: "My Events",
       icon: FaCalendarAlt,
-      path: "/dashboard/my-events",
+      path: "/dashboard/myevents",
       badge: "12",
     },
     { name: "Saved", icon: FaBookmark, path: "/dashboard/saved", badge: "8" },
     {
       name: "Hosting",
       icon: FaTicketAlt,
-      path: "/dashboard/hosting",
+      path: "/dashboard/hostevent",
       badge: "3",
     },
     {
       name: "Notifications",
       icon: FaBell,
-      path: "/dashboard/notifications",
+      path: "/dashboard/notification",
       badge: "5",
     },
   ];
 
   const bottomNavItems = [
     { name: "Settings", icon: FaCog, path: "/dashboard/settings" },
-    { name: "Logout", icon: FaSignOutAlt, path: "/logout" },
+    { name: "Logout", icon: FaSignOutAlt, path: "/dashboard/logout" },
   ];
 
   // Mock stats - now with colors
@@ -255,7 +255,7 @@ export default function Dashboard() {
             {/* Host Event Button */}
             <div className="mt-6 px-4">
               <Link
-                to="/host-event"
+                to="/dashboard/hostevent"
                 className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#e73768] text-white font-semibold rounded-xl hover:bg-[#d62d5c] transition shadow-sm"
               >
                 <FaPlus size={16} />
@@ -496,7 +496,7 @@ export default function Dashboard() {
                   </div>
 
                   <Link
-                    to="/dashboard/notifications"
+                    to="/dashboard/notification"
                     className="mt-4 text-sm text-[#69e0f9] hover:text-[#4db8d6] flex items-center gap-1 font-medium"
                   >
                     View all notifications

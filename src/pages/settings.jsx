@@ -148,63 +148,68 @@ export default function Settings() {
             {/* PROFILE TAB */}
             {activeTab === "profile" && (
               <div className="space-y-6">
-                {/* Profile Header with Cover Image */}
+                {/* Profile Header with Full Cover Image */}
                 <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
-                  {/* Cover Image */}
-                  <div className="relative h-32 bg-gradient-to-r from-[#e73768]/20 via-[#69e0f9]/20 to-[#e73768]/20">
+                  {/* Full Cover Image - Faded - Extends to cover entire profile section */}
+                  <div className="relative">
                     <img
                       src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1200&q=80"
                       alt="Cover"
-                      className="w-full h-full object-cover opacity-50"
+                      className="w-full h-80 object-cover opacity-40"
                     />
-                    <button className="absolute top-4 right-4 px-4 py-2 bg-white/90 backdrop-blur rounded-lg text-sm font-medium hover:bg-white transition">
+                    <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-white/40 to-white/70"></div>
+
+                    <button className="absolute top-6 right-6 px-4 py-2 bg-white/90 backdrop-blur rounded-lg text-sm font-medium hover:bg-white transition shadow-lg">
                       <FaCamera className="inline mr-2" size={14} />
                       Change Cover
                     </button>
-                  </div>
 
-                  {/* Profile Info */}
-                  <div className="p-8 -mt-16">
-                    <div className="flex flex-col md:flex-row items-start md:items-end gap-6">
-                      {/* Avatar */}
-                      <div className="relative">
-                        <img
-                          src="https://ui-avatars.com/api/?name=Chioma+Adebayo&background=e73768&color=fff&size=200"
-                          alt="Profile"
-                          className="w-28 h-28 rounded-2xl border-4 border-white shadow-xl"
-                        />
-                        <button className="absolute bottom-0 right-0 w-10 h-10 bg-[#69e0f9] text-white rounded-xl flex items-center justify-center hover:bg-[#4db8d6] transition shadow-lg">
-                          <FaCamera size={16} />
-                        </button>
-                      </div>
+                    {/* Profile Info - Positioned absolutely over the cover */}
+                    <div className="absolute inset-0 px-8 pt-20 pb-8 flex flex-col justify-center">
+                      <div className="flex flex-col md:flex-row items-start md:items-end gap-6">
+                        {/* Avatar */}
+                        <div className="relative">
+                          <img
+                            src="https://ui-avatars.com/api/?name=Chioma+Adebayo&background=e73768&color=fff&size=200"
+                            alt="Profile"
+                            className="w-28 h-28 rounded-2xl border-4 border-white shadow-xl"
+                          />
+                          <button className="absolute bottom-0 right-0 w-10 h-10 bg-[#69e0f9] text-white rounded-xl flex items-center justify-center hover:bg-[#4db8d6] transition shadow-lg">
+                            <FaCamera size={16} />
+                          </button>
+                        </div>
 
-                      {/* Info */}
-                      <div className="flex-1">
-                        <h2 className="text-3xl font-extrabold text-black mb-1">
-                          {profileData.fullName}
-                        </h2>
-                        <p className="text-gray-600 mb-4">
-                          {profileData.email}
-                        </p>
+                        {/* Info */}
+                        <div className="flex-1">
+                          <h2 className="text-3xl font-extrabold text-black mb-1">
+                            {profileData.fullName}
+                          </h2>
+                          <p className="text-gray-700 mb-4">
+                            {profileData.email}
+                          </p>
 
-                        {/* Stats */}
-                        <div className="flex gap-6">
-                          {profileStats.map((stat, index) => {
-                            const Icon = stat.icon;
-                            return (
-                              <div key={index} className="text-center">
-                                <div className="flex items-center gap-2 mb-1">
-                                  <Icon className="text-[#69e0f9]" size={16} />
-                                  <p className="text-2xl font-extrabold text-black">
-                                    {stat.value}
+                          {/* Stats */}
+                          <div className="flex gap-6">
+                            {profileStats.map((stat, index) => {
+                              const Icon = stat.icon;
+                              return (
+                                <div key={index} className="text-center">
+                                  <div className="flex items-center gap-2 mb-1">
+                                    <Icon
+                                      className="text-[#69e0f9]"
+                                      size={16}
+                                    />
+                                    <p className="text-2xl font-extrabold text-black">
+                                      {stat.value}
+                                    </p>
+                                  </div>
+                                  <p className="text-xs text-gray-700 font-medium">
+                                    {stat.label}
                                   </p>
                                 </div>
-                                <p className="text-xs text-gray-600">
-                                  {stat.label}
-                                </p>
-                              </div>
-                            );
-                          })}
+                              );
+                            })}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -876,36 +881,36 @@ export default function Settings() {
               </div>
             )}
 
-            {/* PREFERENCES TAB */}
-            {activeTab === "preferences" && (
-              <div className="space-y-6">
-                {/* Header with Image */}
-                <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
-                  <div className="grid grid-cols-1 md:grid-cols-2">
-                    <div className="relative h-48 md:h-auto order-2 md:order-1">
-                      <img
-                        src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=600&q=80"
-                        alt="Preferences"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-l from-white/90 to-transparent md:from-transparent"></div>
-                    </div>
-                    <div className="p-8 order-1 md:order-2">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-12 h-12 bg-[#e73768]/10 rounded-xl flex items-center justify-center">
-                          <FaGlobe className="text-[#e73768]" size={24} />
-                        </div>
-                        <h3 className="text-2xl font-bold text-black">
-                          Your Preferences
-                        </h3>
-                      </div>
-                      <p className="text-gray-600">
-                        Customize your experience with language, currency, and
-                        event preferences.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+         {/* PREFERENCES TAB */}
+{activeTab === "preferences" && (
+  <div className="space-y-6">
+    {/* Header with Image */}
+    <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="relative h-34 md:h-48 order-2 md:order-1">
+          <img
+            src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=600&q=80"
+            alt="Preferences"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-l from-white/90 to-transparent md:from-transparent"></div>
+        </div>
+        <div className="p-8 order-1 md:order-2">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-12 h-12 bg-[#e73768]/10 rounded-xl flex items-center justify-center">
+              <FaGlobe className="text-[#e73768]" size={24} />
+            </div>
+            <h3 className="text-2xl font-bold text-black">
+              Your Preferences
+            </h3>
+          </div>
+          <p className="text-gray-600">
+            Customize your experience with language, currency, and
+            event preferences.
+          </p>
+        </div>
+      </div>
+    </div>
 
                 {/* Language & Region */}
                 <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
