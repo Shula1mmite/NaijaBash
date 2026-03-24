@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { mockSignIn, mockSignUp } from "../mock/auth";
-import signupImg from "../assets/images/image2.png";
-import signinImg from "../assets/images/image1.png";
+import signupImg from "../assets/images/eventimage1.png";
+import signinImg from "../assets/images/eventimage3.png";
 import { FcGoogle } from "react-icons/fc";
 import {
   FaUserPlus,

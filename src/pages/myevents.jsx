@@ -78,7 +78,7 @@ export default function MyEvents() {
       location: "Private Residence, Ikeja, Lagos",
       city: "Lagos",
       image:
-        "https://images.unsplash.com/photo-1610149404767-4f82f2f5211e?auto=format&fit=crop&w=800&q=80",
+        namin,
       category: "Naming Ceremonies",
       role: "VIP Guest",
       attendees: 80,

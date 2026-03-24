@@ -1,6 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import cultureImg from "../assets/images/image1.png";
+import cultureImg from "../assets/images/eventimage12.png";
+// At the top of your home.jsx file, after other imports
+import weddingImg from "../assets/images/eventimage16.jpg";
+import burialImg from "../assets/images/eventimage17.jpg";
+import namingImg from "../assets/images/eventimage1.png";
+import festivalImg from "../assets/images/eventimage4.png";
+import concertImg from "../assets/images/eventimage15.jpg";
+import nightlifeImg from "../assets/images/eventimage9.png";
+import foodImg from "../assets/images/eventimage14.jpg";
+import businessImg from "../assets/images/eventimage10.png";
+import sportsImg from "../assets/images/eventimage13.jpg";
+import culturalImg from "../assets/images/eventimage6.png";
+
+// Event images
+import lagosWeddingImg from "../assets/images/eventimage16.jpg";
+import ibadanBurialImg from "../assets/images/eventimage17.jpg";
+import abujaFestivalImg from "../assets/images/eventimage3.png";
 import { useEffect, useState } from "react";
 
 import {
@@ -31,61 +47,61 @@ const categories = [
   {
     name: "Owanbe Weddings",
     icon: FaHeart,
-    image: "https://images.unsplash.com/photo-1534751516642-a1af1efb6e5a",
+    image: weddingImg,
     color: "#e73768",
   },
   {
     name: "Burials",
     icon: FaUsers,
-    image: "https://images.unsplash.com/photo-1582719478170-3f4a4c1f7f77",
+    image: burialImg,
     color: "#8f37b1",
   },
   {
     name: "Naming Ceremonies",
     icon: FaStar,
-    image: "https://images.unsplash.com/photo-1610149404767-4f82f2f5211e",
+    image: namingImg,
     color: "#36123f",
   },
   {
     name: "Traditional Festivals",
     icon: FaCalendarAlt,
-    image: "https://images.unsplash.com/photo-1520975916090-3105956dac38",
+    image: festivalImg,
     color: "#69e0f9",
   },
   {
     name: "Concerts",
     icon: FaMusic,
-    image: "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2",
+    image: concertImg,
     color: "#e73768",
   },
   {
     name: "Nightlife",
     icon: FaBeer,
-    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30",
+    image: nightlifeImg,
     color: "#8f37b1",
   },
   {
     name: "Food & Drinks",
     icon: FaUtensils,
-    image: "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0",
+    image: foodImg,
     color: "#36123f",
   },
   {
     name: "Business",
     icon: FaUsers,
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+    image: businessImg,
     color: "#69e0f9",
   },
   {
     name: "Sports",
     icon: FaStar,
-    image: "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf",
+    image: sportsImg,
     color: "#e73768",
   },
   {
     name: "Cultural",
     icon: FaCalendarAlt,
-    image: "https://images.unsplash.com/photo-1498654896293-37aacf113fd9",
+    image: culturalImg,
     color: "#8f37b1",
   },
 ];
@@ -97,8 +113,7 @@ const events = [
     date: "Feb 20, 2026",
     city: "Lagos",
     attendees: 245,
-    image:
-      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80",
+    image: lagosWeddingImg,
   },
   {
     id: 2,
@@ -106,8 +121,7 @@ const events = [
     date: "Mar 3, 2026",
     city: "Ibadan",
     attendees: 180,
-    image:
-      "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=800&q=80",
+    image: ibadanBurialImg,
   },
   {
     id: 3,
@@ -115,8 +129,7 @@ const events = [
     date: "Apr 12, 2026",
     city: "Abuja",
     attendees: 500,
-    image:
-      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+    image: abujaFestivalImg,
   },
 ];
 

@@ -1,5 +1,17 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import weddingImg from "../assets/images/eventimage16.jpg";
+import burialImg from "../assets/images/eventimage17.jpg";
+import namingImg from "../assets/images/eventimage1.png";
+import festivalImg from "../assets/images/eventimage4.png";
+import concertImg from "../assets/images/eventimage15.jpg";
+import nightlifeImg from "../assets/images/eventimage9.png";
+import foodImg from "../assets/images/eventimage14.jpg";
+import businessImg from "../assets/images/eventimage10.png";
+import sportsImg from "../assets/images/eventimage13.jpg";
+import culturalImg from "../assets/images/eventimage6.png";
+import networkingImg from "../assets/images/eventimage2.png";
+
 const EVENTS = [
   {
     id: 1,
@@ -7,7 +19,7 @@ const EVENTS = [
     city: "Lagos",
     date: "March 23, 2026",
     category: "Owanbe Weddings",
-    image: "https://images.unsplash.com/photo-1529634894511-1c9c5fbc3b4d",
+    image: weddingImg,
     description:
       "A grand Yoruba traditional wedding featuring live bands, flowing drinks, and a full owanbe experience.",
     dressCode: "Aso Ebi (Gold & Champagne)",
@@ -19,7 +31,7 @@ const EVENTS = [
     city: "Ibadan",
     date: "March 30, 2026",
     category: "Burials",
-    image: "https://images.unsplash.com/photo-1520975916090-3105956dac38",
+    image: burialImg,
     description:
       "A respectful burial ceremony honouring a life well lived, with prayers, tributes, and family gatherings.",
     dressCode: "Black or Navy Blue",
@@ -31,7 +43,7 @@ const EVENTS = [
     city: "Enugu",
     date: "April 12, 2026",
     category: "Traditional Festivals",
-    image: "https://images.unsplash.com/photo-1498654896293-37aacf113fd9",
+    image: festivalImg,
     description:
       "A colourful celebration of Igbo culture featuring masquerades, traditional dances, and local cuisine.",
     dressCode: "Traditional Attire",
@@ -43,7 +55,7 @@ const EVENTS = [
     city: "Abuja",
     date: "April 2, 2026",
     category: "Concerts",
-    image: "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2",
+    image: concertImg,
     description:
       "An electrifying night of live performances from top Nigerian artists and DJs.",
     dressCode: "Casual / Party Wear",
@@ -55,7 +67,7 @@ const EVENTS = [
     city: "Lagos",
     date: "April 18, 2026",
     category: "Food & Drinks",
-    image: "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0",
+    image: foodImg,
     description:
       "A vibrant outdoor food carnival showcasing Nigeria’s best street food and drinks.",
     dressCode: "Casual",
@@ -67,7 +79,7 @@ const EVENTS = [
     city: "Lagos",
     date: "April 25, 2026",
     category: "Business",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+    image: businessImg,
     description:
       "A networking mixer for founders, creatives, and professionals in tech and business.",
     dressCode: "Smart Casual",
@@ -79,7 +91,7 @@ const EVENTS = [
     city: "Port Harcourt",
     date: "April 5, 2026",
     category: "Nightlife",
-    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30",
+    image: nightlifeImg,
     description:
       "A high-energy Friday night party with DJs, cocktails, and late-night vibes.",
     dressCode: "Party Wear",
@@ -91,7 +103,7 @@ const EVENTS = [
     city: "Ilorin",
     date: "May 1, 2026",
     category: "Sports",
-    image: "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf",
+    image: sportsImg,
     description:
       "An inter-university sports festival featuring football, athletics, and team sports.",
     dressCode: "Sportswear",
@@ -103,7 +115,7 @@ const EVENTS = [
     city: "Ibadan",
     date: "May 10, 2026",
     category: "Owanbe Weddings",
-    image: "https://images.unsplash.com/photo-1523437237209-d0f6d4c4e6c8",
+    image: weddingImg,
     description:
       "An exclusive, invitation-only luxury traditional wedding with premium catering and décor.",
     dressCode: "Aso Ebi (Royal Blue)",
@@ -115,7 +127,7 @@ const EVENTS = [
     city: "Abeokuta",
     date: "May 14, 2026",
     category: "Burials",
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba",
+    image: burialImg,
     description:
       "A high-profile burial ceremony attended by dignitaries and members of the public.",
     dressCode: "Black Formal",
@@ -127,7 +139,7 @@ const EVENTS = [
     city: "Abuja",
     date: "May 20, 2026",
     category: "Food & Drinks",
-    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
+    image: foodImg,
     description:
       "A premium food and wine experience featuring chefs, tastings, and live entertainment.",
     dressCode: "Smart Casual",
@@ -139,7 +151,7 @@ const EVENTS = [
     city: "Lagos",
     date: "May 7, 2026",
     category: "Nightlife",
-    image: "https://images.unsplash.com/photo-1506157786151-b8491531f063",
+    image: concertImg,
     description:
       "A night dedicated to Amapiano and Afrobeats with top DJs and party lovers.",
     dressCode: "Trendy Night Out",
@@ -151,7 +163,7 @@ const EVENTS = [
     city: "Abuja",
     date: "June 1, 2026",
     category: "Cultural",
-    image: "https://images.unsplash.com/photo-1525097487452-6278ff080c31",
+    image: culturalImg,
     description:
       "A national celebration of Nigeria’s diverse cultures, arts, and traditions.",
     dressCode: "Traditional Attire",
@@ -163,7 +175,7 @@ const EVENTS = [
     city: "Lagos",
     date: "June 4, 2026",
     category: "Business",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+    image: networkingImg,
     description:
       "Startup founders pitch ideas while investors and professionals network.",
     dressCode: "Business Casual",
@@ -175,7 +187,7 @@ const EVENTS = [
     city: "Benin City",
     date: "June 10, 2026",
     category: "Sports",
-    image: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2",
+    image: sportsImg,
     description:
       "A competitive football tournament featuring teams from multiple states.",
     dressCode: "Team Jerseys / Casual",
@@ -187,15 +199,13 @@ const EVENTS = [
     city: "Awka",
     date: "June 12, 2026",
     category: "Naming Ceremonies",
-    image: "https://images.unsplash.com/photo-1545235617-9465d2a55698",
+    image: namingImg,
     description:
       "A traditional naming ceremony celebrating family, culture, and heritage.",
     dressCode: "Traditional Wear",
     venue: "Family Residence, Awka",
   },
 ];
-
-
 
 export default function EventDetails() {
   const { id } = useParams();

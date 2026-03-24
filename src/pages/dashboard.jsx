@@ -1,5 +1,13 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import weddingImg from "../assets/images/eventimage16.jpg";
+
+import namingImg from "../assets/images/eventimage1.png";
+
+import nightlifeImg from "../assets/images/eventimage9.png";
+
+import culturalImg from "../assets/images/eventimage6.png";
+
 import {
   FaHome,
   FaCalendarAlt,
@@ -28,8 +36,7 @@ export default function Dashboard() {
   // Mock user data
   const user = {
     name: "Chioma Adebayo",
-    avatar:
-      "https://ui-avatars.com/api/?name=Chioma+Adebayo&background=e73768&color=fff&size=200",
+    avatar: culturalImg,
     location: "Lagos, Nigeria",
   };
 
@@ -96,8 +103,7 @@ export default function Dashboard() {
       date: "Feb 22, 2026",
       time: "2:00 PM",
       location: "Lekki, Lagos",
-      image:
-        "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=400&q=80",
+      image: weddingImg,
       category: "Wedding",
       attendees: 245,
       role: "Guest",
@@ -108,8 +114,7 @@ export default function Dashboard() {
       date: "Feb 28, 2026",
       time: "8:00 PM",
       location: "Victoria Island, Lagos",
-      image:
-        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=400&q=80",
+      image: nightlifeImg,
       category: "Concert",
       attendees: 120,
       role: "Attendee",
@@ -120,8 +125,7 @@ export default function Dashboard() {
       date: "Mar 5, 2026",
       time: "11:00 AM",
       location: "Ikeja, Lagos",
-      image:
-        "https://images.unsplash.com/photo-1610149404767-4f82f2f5211e?auto=format&fit=crop&w=400&q=80",
+      image: namingImg,
       category: "Naming Ceremony",
       attendees: 80,
       role: "VIP Guest",
@@ -135,8 +139,7 @@ export default function Dashboard() {
       title: "Detty December Warm-Up Party",
       date: "Mar 20, 2026",
       location: "Victoria Island",
-      image:
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=400&q=80",
+      image: namingImg,
       tag: "Popular",
     },
     {
@@ -144,8 +147,7 @@ export default function Dashboard() {
       title: "Traditional Igbo Wedding",
       date: "Mar 25, 2026",
       location: "Enugu",
-      image:
-        "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=400&q=80",
+      image: weddingImg,
       tag: "New",
     },
   ];

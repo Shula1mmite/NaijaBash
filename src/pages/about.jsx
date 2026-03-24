@@ -8,7 +8,7 @@ import {
   FaLightbulb,
   FaHandshake,
 } from "react-icons/fa";
-import cultureImg from "../assets/images/image1.png";
+import cultureImg from "../assets/images/eventimage11.png";
 
 export default function About() {
   const values = [

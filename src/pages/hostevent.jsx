@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import cultureImg from "../assets/images/image1.png";
+import weddingImg from "../assets/images/eventimage16.jpg";
+
+import namingImg from "../assets/images/eventimage1.png";
+import businessImg from "../assets/images/eventimage10.png";
+
+import nightlifeImg from "../assets/images/eventimage9.png";
+
+import culturalImg from "../assets/images/eventimage6.png";
+import networkingImg from "../assets/images/eventimage2.png";
+
 import {
   FaInfoCircle,
   FaMapMarkerAlt,
@@ -220,7 +229,7 @@ export default function HostEvent() {
           {/* Right - Image */}
           <div className="relative">
             <img
-              src={cultureImg}
+              src={culturalImg}
               alt="Nigerian celebration"
               className="w-full h-80 object-cover rounded-2xl shadow-xl"
             />
@@ -287,7 +296,7 @@ export default function HostEvent() {
               {currentStep === 1 && (
                 <div className="bg-gradient-to-br from-[#e73768]/5 to-[#69e0f9]/5 rounded-2xl p-6 border border-gray-200">
                   <img
-                    src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=400&q=80"
+                    src={businessImg}
                     alt="Event planning"
                     className="w-full h-48 object-cover rounded-xl mb-4"
                   />
@@ -323,7 +332,7 @@ export default function HostEvent() {
               {currentStep === 2 && (
                 <div className="bg-gradient-to-br from-[#69e0f9]/5 to-[#e73768]/5 rounded-2xl p-6 border border-gray-200">
                   <img
-                    src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=400&q=80"
+                    src={nightlifeImg}
                     alt="Location"
                     className="w-full h-48 object-cover rounded-xl mb-4"
                   />
@@ -359,7 +368,7 @@ export default function HostEvent() {
               {currentStep === 3 && (
                 <div className="bg-gradient-to-br from-[#e73768]/5 to-[#69e0f9]/5 rounded-2xl p-6 border border-gray-200">
                   <img
-                    src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=400&q=80"
+                    src={networkingImg}
                     alt="Tickets"
                     className="w-full h-48 object-cover rounded-xl mb-4"
                   />
@@ -395,7 +404,7 @@ export default function HostEvent() {
               {currentStep === 4 && (
                 <div className="bg-gradient-to-br from-[#69e0f9]/5 to-[#e73768]/5 rounded-2xl p-6 border border-gray-200">
                   <img
-                    src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=400&q=80"
+                    src={namingImg}
                     alt="Success"
                     className="w-full h-48 object-cover rounded-xl mb-4"
                   />
@@ -662,7 +671,7 @@ export default function HostEvent() {
                         </label>
                         <div className="rounded-xl overflow-hidden border-2 border-gray-200 relative">
                           <img
-                            src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&w=800&q=80"
+                            src={weddingImg}
                             alt="Map preview"
                             className="w-full h-64 object-cover opacity-50"
                           />

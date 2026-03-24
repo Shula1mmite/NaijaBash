@@ -1,5 +1,20 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import weddingImg from "../assets/images/eventimage16.jpg";
+import burialImg from "../assets/images/eventimage17.jpg";
+import namingImg from "../assets/images/eventimage1.png";
+import festivalImg from "../assets/images/eventimage4.png";
+import concertImg from "../assets/images/eventimage15.jpg";
+import nightlifeImg from "../assets/images/eventimage9.png";
+import foodImg from "../assets/images/eventimage14.jpg";
+import businessImg from "../assets/images/eventimage10.png";
+import sportsImg from "../assets/images/eventimage13.jpg";
+import culturalImg from "../assets/images/eventimage6.png";
+import networkingImg from "../assets/images/eventimage2.png";
+
+import lagosWeddingImg from "../assets/images/eventimage16.jpg";
+import ibadanBurialImg from "../assets/images/eventimage17.jpg";
+import abujaFestivalImg from "../assets/images/eventimage3.png";
 
 const CATEGORIES = [
   "All",
@@ -23,7 +38,7 @@ const EVENTS = [
     date: "2026-03-23",
     price: "Free",
     category: "Owanbe Weddings",
-    image: "https://images.unsplash.com/photo-1529634894511-1c9c5fbc3b4d",
+    image: weddingImg,
   },
   {
     id: 2,
@@ -32,7 +47,7 @@ const EVENTS = [
     date: "2026-03-30",
     price: "Free",
     category: "Burials",
-    image: "https://images.unsplash.com/photo-1520975916090-3105956dac38",
+    image: burialImg,
   },
   {
     id: 3,
@@ -41,7 +56,7 @@ const EVENTS = [
     date: "2026-04-12",
     price: "Paid",
     category: "Traditional Festivals",
-    image: "https://images.unsplash.com/photo-1498654896293-37aacf113fd9",
+    image: festivalImg,
   },
   {
     id: 4,
@@ -50,7 +65,7 @@ const EVENTS = [
     date: "2026-04-02",
     price: "Paid",
     category: "Concerts",
-    image: "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2",
+    image: concertImg,
   },
   {
     id: 5,
@@ -59,7 +74,7 @@ const EVENTS = [
     date: "2026-04-18",
     price: "Free",
     category: "Food & Drinks",
-    image: "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0",
+    image: foodImg,
   },
   {
     id: 6,
@@ -68,7 +83,7 @@ const EVENTS = [
     date: "2026-04-25",
     price: "Paid",
     category: "Business",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+    image: businessImg,
   },
   {
     id: 7,
@@ -77,7 +92,7 @@ const EVENTS = [
     date: "2026-04-05",
     price: "Paid",
     category: "Nightlife",
-    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30",
+    image: nightlifeImg,
   },
   {
     id: 8,
@@ -86,10 +101,8 @@ const EVENTS = [
     date: "2026-05-01",
     price: "Free",
     category: "Sports",
-    image: "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf",
+    image: sportsImg,
   },
-
-  // 🔥 MORE EVENTS BELOW
 
   {
     id: 9,
@@ -98,7 +111,7 @@ const EVENTS = [
     date: "2026-05-10",
     price: "Invitation only",
     category: "Owanbe Weddings",
-    image: "https://images.unsplash.com/photo-1523437237209-d0f6d4c4e6c8",
+    image: lagosWeddingImg,
   },
   {
     id: 10,
@@ -107,7 +120,7 @@ const EVENTS = [
     date: "2026-05-14",
     price: "Free",
     category: "Burials",
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba",
+    image: ibadanBurialImg,
   },
   {
     id: 11,
@@ -116,7 +129,7 @@ const EVENTS = [
     date: "2026-05-20",
     price: "Paid",
     category: "Food & Drinks",
-    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
+    image: foodImg,
   },
   {
     id: 12,
@@ -125,7 +138,7 @@ const EVENTS = [
     date: "2026-05-07",
     price: "Paid",
     category: "Nightlife",
-    image: "https://images.unsplash.com/photo-1506157786151-b8491531f063",
+    image: nightlifeImg,
   },
   {
     id: 13,
@@ -134,7 +147,7 @@ const EVENTS = [
     date: "2026-06-01",
     price: "Free",
     category: "Cultural",
-    image: "https://images.unsplash.com/photo-1525097487452-6278ff080c31",
+    image: culturalImg,
   },
   {
     id: 14,
@@ -143,7 +156,7 @@ const EVENTS = [
     date: "2026-06-04",
     price: "Paid",
     category: "Business",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+    image: networkingImg,
   },
   {
     id: 15,
@@ -152,7 +165,7 @@ const EVENTS = [
     date: "2026-06-10",
     price: "Free",
     category: "Sports",
-    image: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2",
+    image: sportsImg,
   },
   {
     id: 16,
@@ -161,7 +174,7 @@ const EVENTS = [
     date: "2026-06-12",
     price: "Free",
     category: "Naming Ceremonies",
-    image: "https://images.unsplash.com/photo-1545235617-9465d2a55698",
+    image: namingImg,
   },
 ];
 
