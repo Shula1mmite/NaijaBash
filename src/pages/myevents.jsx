@@ -1,5 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import weddingImg from "../assets/images/eventimage16.jpg";
+import burialImg from "../assets/images/eventimage17.jpg";
+import namingImg from "../assets/images/eventimage1.png";
+import festivalImg from "../assets/images/eventimage4.png";
+import concertImg from "../assets/images/eventimage15.jpg";
+import nightlifeImg from "../assets/images/eventimage9.png";
+import foodImg from "../assets/images/eventimage14.jpg";
+import businessImg from "../assets/images/eventimage10.png";
+import sportsImg from "../assets/images/eventimage13.jpg";
+import culturalImg from "../assets/images/eventimage6.png";
+
+// Event images
+import lagosWeddingImg from "../assets/images/eventimage16.jpg";
+import ibadanBurialImg from "../assets/images/eventimage17.jpg";
+import abujaFestivalImg from "../assets/images/eventimage3.png";
 import {
   FaCalendarAlt,
   FaMapMarkerAlt,
@@ -47,8 +62,7 @@ export default function MyEvents() {
       daysUntil: 7,
       location: "Eko Hotel Grand Ballroom, Lagos",
       city: "Lagos",
-      image:
-        "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80",
+      image: weddingImg,
       category: "Owanbe Weddings",
       role: "Bridesmaid",
       attendees: 245,
@@ -63,7 +77,7 @@ export default function MyEvents() {
       location: "Terra Kulture, Victoria Island, Lagos",
       city: "Lagos",
       image:
-        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+        nightlifeImg,
       category: "Concerts",
       role: "Guest",
       attendees: 120,
@@ -77,8 +91,7 @@ export default function MyEvents() {
       daysUntil: 17,
       location: "Private Residence, Ikeja, Lagos",
       city: "Lagos",
-      image:
-        namin,
+      image: namingImg,
       category: "Naming Ceremonies",
       role: "VIP Guest",
       attendees: 80,
@@ -95,7 +108,7 @@ export default function MyEvents() {
       location: "Landmark Event Centre, Lagos",
       city: "Lagos",
       image:
-        "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?auto=format&fit=crop&w=800&q=80",
+        culturalImg,
       category: "Nightlife",
       role: "Guest",
       attendees: 300,
